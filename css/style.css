@@ -376,6 +376,37 @@ img{display:block;max-width:100%;}
 .proj-page.active ~ .fab-back,
 .fab-back.visible, a.fab-back{display:flex;}
 
+/* ── PROJECT NAVIGATION ── */
+.proj-nav{
+  position:fixed;bottom:32px;right:32px;z-index:300;
+  display:flex;gap:8px;
+}
+.proj-nav a{
+  background:var(--ink);color:var(--white);
+  padding:8px;border-radius:20px;
+  font-family:var(--font-body);font-size:15px;font-weight:500;
+  text-decoration:none;
+  align-items:center;justify-content:center;
+  transition:background .2s,color .2s,padding .2s;
+  border:none;cursor:pointer;
+  display:flex;
+}
+.proj-nav.show-labels a{
+  padding:5px 14px;
+}
+.proj-nav a:hover{
+  background:var(--accent);color:var(--accent-ink);
+}
+.proj-nav svg{width:14px;height:14px;}
+.proj-nav .nav-label{
+  display:none;
+  margin-left:6px;
+  white-space:nowrap;
+}
+.proj-nav.show-labels .nav-label{
+  display:inline;
+}
+
 /* ── BRANDS SECTION ── */
 .brands-section{
   margin-top:80px;
